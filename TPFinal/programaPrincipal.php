@@ -1,2 +1,3 @@
-<php? 
-echo "HOLA" ;
+<?php
+
+echo "HOLA";
