@@ -1,3 +1,4 @@
-<php? 
-echo "HOLA" ;
-echo "holis" ;
+<?php
+
+echo "HOLA";
+echo "ahora chi :)"
