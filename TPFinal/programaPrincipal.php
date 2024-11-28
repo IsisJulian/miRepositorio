@@ -30,16 +30,16 @@ do{
                 autoArr($autArray);
                 break;
             case "b":
-            
+                manualArray($manuArr);
                 break;
             case "c":
-            
+                mostrarArr($autArray);
                 break;
             case "d":
-            
+                autoArr($autArray);
                 break;
             case "e":
-            
+                autoArr($autArray);
                 break;
             case "f":
             
