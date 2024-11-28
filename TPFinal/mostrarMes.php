@@ -7,11 +7,10 @@
 */
 function mostrarTmes($auxArr,$mesE){
 
-$promedio=0
-     
+$promedio=0;
 for($i=0; $i<count($auxArr[0]); $i++){
-  if($auxArr[$i][0] == $anioE) {
-    for($j=0; $j<count($auxArr); $i++){
+    if($auxArr[0][$i] == $mesE) {
+        for($j=0; $j<count($auxArr); $i++){
             switch ($j){
               case 0:
                 $strAnio="2014";
@@ -45,14 +44,12 @@ for($i=0; $i<count($auxArr[0]); $i++){
                 break;
             }
      echo "año"." ".$strAnio.":".$auxArr[$j][$i],"°C","\n";
-      $promedio=$promedio+$auxArr[$i][$j];
-        }
+      $promedio=$promedio+$auxArr[$j][$i];
+        }    
     }
 }
+}
+
 $promedio=$promedio/(count($auxArr[0]));
 echo "el promedio de todos los meses acumulados por año es: ".$promedio;
-
-
-
-
 ?>
