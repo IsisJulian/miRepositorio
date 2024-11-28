@@ -1,7 +1,7 @@
 <?php
 /**
  * este modulo cargara con valores la matriz inicializada en el programa principal
-* @param float $autArray
+* @param array $autArray
 */
 function autoArr($autoArray){
     

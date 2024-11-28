@@ -36,7 +36,11 @@ do{
                 mostrarArr($autArray);
                 break;
             case "d":
-                autoArr($autArray);
+                echo  "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023) :";
+                $anioElegido=trim(fgets(STDIN));
+                echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre";
+                $mesElegido=trim(fgets(STDIN));
+                mostrarArrAyM($autArray,$anioElegido,$mesElegido);
                 break;
             case "e":
                 autoArr($autArray);

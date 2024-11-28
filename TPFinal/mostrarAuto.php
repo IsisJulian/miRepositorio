@@ -1,6 +1,6 @@
 <?php
 /*este modulo cargara los valores de la matriz de manera manual y es inicializada en el programa principal
-@param float $autoArray
+@param array $autoArray
 */
 
 function mostrarArr($autoA){
