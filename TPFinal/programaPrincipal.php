@@ -40,7 +40,7 @@ do{
                 $anioElegido=trim(fgets(STDIN));
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre";
                 $mesElegido=trim(fgets(STDIN));
-                if ($anioElegido<10 && $mesElegido<11) {
+                if ($anioElegido<10 && $mesElegido<12) {
                 mostrarArrAyM($autArray,$anioElegido,$mesElegido);
                 }else{
                 echo "Ingreso un dato incorrecto"
