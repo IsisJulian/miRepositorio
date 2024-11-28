@@ -40,10 +40,16 @@ do{
                 $anioElegido=trim(fgets(STDIN));
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre";
                 $mesElegido=trim(fgets(STDIN));
+                if ($anioElegido<10 && $mesElegido<11) {
                 mostrarArrAyM($autArray,$anioElegido,$mesElegido);
+                }else{
+                echo "Ingreso un dato incorrecto"
+                }
                 break;
             case "e":
-                autoArr($autArray);
+                echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
+                $anioE= trim(fgets(STDIN));
+                mostrarTanio($anioE,$autArray);
                 break;
             case "f":
             
