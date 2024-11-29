@@ -11,7 +11,7 @@ function mostrarFinal($auxi){
 
 for($i=0; $i<count($auxi); $i++){
     for($j=0; $j<count($auxi[0]); $j++){
-        echo $auxi[$i][$j],"\n";
+        echo $auxi[$j][$i],"\n";
     }
 }
 
