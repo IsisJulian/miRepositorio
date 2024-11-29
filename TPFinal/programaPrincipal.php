@@ -69,7 +69,7 @@ do{
             case "j":
                 asoArray($asociativoArray,$autArray,$primaveraArray,$inviernoArray);
 
-                    foreach ($asociativoArr as $key => $value) {
+                    foreach ($asociativoArray as $key => $value) {
                         echo "la clave es: ".$key;
                             if($key == "completa"){
                             mostrarFinal($value);
