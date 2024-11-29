@@ -52,4 +52,3 @@ for($i=0; $i<count($auxArr[0]); $i++){
 
 $promedio=$promedio/(count($auxArr[0]));
 echo "el promedio de todos los meses acumulados por año es: ".$promedio;
-?>
