@@ -19,13 +19,13 @@ function mostrarTempMaxMin($autoAu){
     for($i=0; $i<count($autoAu); $i++){
         for($j=0; $j<count($autoAu[0]);$j++){
             if($tempMax<$autoAu){
-                $tempMax=$autoAu;
+                $tempMax=$autoAu[$j][$i];
                 $tempMaxAnio=$i;
                 $tempMaxMes=$j;
 
             }
                 if($tempMin>$autoAu){
-                $tempMin=$autoAu;
+                $tempMin=$autoAu[$j][$i];
                 $tempMinAnio=$i;
                 $tempMinMes=$j;
                 }

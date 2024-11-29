@@ -61,7 +61,7 @@ do{
                 mostrarTempMaxMin($autArray);
                 break;
             case "h":
-            
+                primavArray($primaveraArray,$autArray);
                 break;
                 case "i":
             
