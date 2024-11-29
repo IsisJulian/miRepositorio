@@ -1,5 +1,5 @@
 <?php
-/*este modulo recupera los datos de primavera del modulo automatico para asi crear un arreglo bidimensional de todos los años */
+/*este modulo recupera los datos de primavera del modulo automatico para asi crear un arreglo bidimensional de todos los años (oct-nov-dic)*/
 /*
 @param Int $i
 @param Int $j

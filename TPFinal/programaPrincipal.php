@@ -64,7 +64,7 @@ do{
                 primavArray($primaveraArray,$autArray);
                 break;
                 case "i":
-            
+                invierArray($inviernoArray,$autArray);
                 break;
             case "j":
             
