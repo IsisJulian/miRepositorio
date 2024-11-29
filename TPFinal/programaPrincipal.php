@@ -67,7 +67,19 @@ do{
                 invierArray($inviernoArray,$autArray);
                 break;
             case "j":
-            
+                asoArray($asociativoArray,$autArray,$primaveraArray,$inviernoArray);
+
+                    foreach ($asociativoArr as $key => $value) {
+                        echo "la clave es: ".$key;
+                            if($key == "completa"){
+                            mostrarFinal($value);
+                            }elseif($key == "primavera"){
+                                mostrarFinal($value);
+
+                            }else{
+                                mostrarFinal(value);
+                            }
+                    }
                 break;    
             default:
                 echo "Eligio una letra que no corresponde \n ";
