@@ -77,7 +77,7 @@ do{
                                 mostrarFinal($value);
 
                             }else{
-                                mostrarFinal(value);
+                                mostrarFinal($value);
                             }
                     }
                 break;    
