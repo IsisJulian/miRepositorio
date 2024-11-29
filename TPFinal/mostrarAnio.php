@@ -6,7 +6,7 @@
 function mostrarTanio($autoA){
 for($i=0; $i<count($autoA); $i++){
   if($autoA[$i][0] == $anioE) {
-    for($j=0; $j<count($autoA[0]); $i++){
+    for($j=0; $j<count($autoA[0]); $j++){
             switch ($j){
               case 0:
                 $mes="ene";

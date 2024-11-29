@@ -10,7 +10,7 @@ function mostrarTmes($auxArr,$mesE){
 $promedio=0;
 for($i=0; $i<count($auxArr[0]); $i++){
     if($auxArr[0][$i] == $mesE) {
-        for($j=0; $j<count($auxArr); $i++){
+        for($j=0; $j<count($auxArr); $j++){
             switch ($j){
               case 0:
                 $strAnio="2014";

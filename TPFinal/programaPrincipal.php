@@ -43,7 +43,7 @@ do{
                 if ($anioElegido<10 && $mesElegido<12) {
                 mostrarArrAyM($autArray,$anioElegido,$mesElegido);
                 }else{
-                echo "Ingreso un dato incorrecto"
+                echo "Ingreso un dato incorrecto";
                 }
                 break;
             case "e":
@@ -52,10 +52,13 @@ do{
                 mostrarTanio($anioE,$autArray);
                 break;
             case "f":
+                echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
+                 $mesE=trim(fgets(STDIN));
+                 mostrarTmes($mesE,$autArray);
             
                 break;
             case "g":
-            
+                mostrarTempMaxMin($autArray);
                 break;
             case "h":
             
@@ -75,4 +78,5 @@ do{
 
 
 
-
+7
+?>
