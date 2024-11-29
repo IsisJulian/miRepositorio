@@ -87,8 +87,4 @@ do{
         echo "Desea elegir otra opcion? (si/no): ";
         $rpta=trim(fgets(STDIN));
 }while($rpta=="si");
-
-
-
-7
 ?>
