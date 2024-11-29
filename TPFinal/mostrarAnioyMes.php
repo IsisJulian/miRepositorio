@@ -4,12 +4,8 @@
 *@param float $autArray
 *@param int $aElegido
 *@param int $mElegido
-
+*@return array
 */
 function mostrarArrAyM($auto,$aElegido,$mElegido){
-
- echo "la temperatura del año y mes elegido es: " .$auto[$aElegido][$mElegido]. "C°";
-
-
-
+    return $auto[$aElegido][$mElegido];
 }

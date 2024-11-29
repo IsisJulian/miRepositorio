@@ -41,9 +41,11 @@ do{
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre";
                 $mesElegido=trim(fgets(STDIN));
                 if ($anioElegido<10 && $mesElegido<12) {
-                mostrarArrAyM($autArray,$anioElegido,$mesElegido);
+
+                    $arrAnioyMes=mostrarArrAyM($autArray,$anioElegido,$mesElegido);
+                    echo "la temperatura del año y mes elegido es: " .$arrAnioyMes. "C°";
                 }else{
-                echo "Ingreso un dato incorrecto"
+                echo "Ingreso un dato incorrecto";
                 }
                 break;
             case "e":
