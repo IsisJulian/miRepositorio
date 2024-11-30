@@ -54,16 +54,19 @@ do{
                 mostrarTanio($anioE,$autArray);
                 break;
             case "f":
+                echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
+                 $mesE=trim(fgets(STDIN));
+                 mostrarTmes($mesE,$autArray);
             
                 break;
             case "g":
-            
+                mostrarTempMaxMin($autArray);
                 break;
             case "h":
-            
+                primavArray($primaveraArray,$autArray);
                 break;
                 case "i":
-            
+                invierArray($inviernoArray,$autArray);
                 break;
             case "j":
             
@@ -77,4 +80,5 @@ do{
 
 
 
-
+7
+?>
