@@ -1,12 +1,12 @@
 <?php
 /*Almacenar valores en un Arreglo Bidimensional(matriz) tomando una fila por año(2014 a 2023),y una columna por cada mes
  inicializacion de arrays*/
-$autArray [10][12];
-$manuArr[10][12];
+$autArray=[10][12];
+$manuArr=[10][12];
 $primaveraArray [10][3];
 $inviernoArray [5][3];
 $asociativoArray [1][3];
-
+require_once 'cargaAutomatica.php';
 //          \n
 do{
         echo "Bienvenido al menu ingrese la opcion que desea de la letra a hasta i:\n ";
@@ -27,50 +27,73 @@ do{
     
         switch ($opcion) {
             case "a":
+                require_once 'cargaAutomatica.php';
                 autoArr($autArray);
+                echo $autArray;
                 break;
+
             case "b":
+                require_once 'cargaManual.php';
                 manualArray($manuArr);
                 break;
+
             case "c":
+                require_once 'mostrarAuto.php';
                 mostrarArr($autArray);
+
                 break;
+                
             case "d":
+
                 echo  "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023) :";
                 $anioElegido=trim(fgets(STDIN));
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre";
                 $mesElegido=trim(fgets(STDIN));
+            
                 if ($anioElegido<10 && $mesElegido<12) {
 
                     $arrAnioyMes=mostrarArrAyM($autArray,$anioElegido,$mesElegido);
                     echo "la temperatura del año y mes elegido es: " .$arrAnioyMes. "C°";
+
                 }else{
-                echo "Ingreso un dato incorrecto";
+                    echo "Ingreso un dato incorrecto";
                 }
                 break;
+
             case "e":
+
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
                 $anioE= trim(fgets(STDIN));
                 mostrarTanio($anioE,$autArray);
                 break;
+
             case "f":
+
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
                  $mesE=trim(fgets(STDIN));
                  mostrarTmes($mesE,$autArray);
             
                 break;
+
             case "g":
+
                 mostrarTempMaxMin($autArray);
                 break;
+
             case "h":
+
                 primavArray($primaveraArray,$autArray);
                 break;
-                case "i":
+
+            case "i":
+
                 invierArray($inviernoArray,$autArray);
                 break;
+
             case "j":
             
-                break;    
+                break;   
+                 
             default:
                 echo "Eligio una letra que no corresponde \n ";
         }

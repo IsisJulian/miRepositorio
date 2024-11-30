@@ -2,8 +2,6 @@
 /*este modulo cargara los valores de la matriz de manera manual y es inicializada en el principal
 @param array $auxArr
 @param int $mesE
-@param string $strAnio
-@param Float $promedio
 */
 function mostrarTmes($auxArr,$mesE){
 

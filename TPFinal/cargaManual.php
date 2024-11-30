@@ -3,17 +3,17 @@
 @param array $manuArr
 */
 
-function manualArray($manuArr){
+function manualArray($manualArr){
+$grados=0;
+    for($i=0; $i<10; $i++){
 
-    for($i=0; $i<count($manuArr); $i++){
-
-        for($j=0; $j<count($manuArr[0]); $i++){
+        for($j=0; $j<12; $j++){
 
             echo "Ingrese grados: ";
 
-            $grados= trim(fgets(STDIN));
+             $grados= trim(fgets(STDIN));
 
-            $manuArr[$i][$j]=$grados;
+            $manualArr[$i][$j]=$grados;
         }
         
         

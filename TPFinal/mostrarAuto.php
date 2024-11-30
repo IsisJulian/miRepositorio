@@ -5,9 +5,9 @@
 
 function mostrarArr($autoA){
 
-    for($i=0; $i<count($autoA); $i++){
+    for($i=0; $i<10; $i++){
 
-        for($j=0; $j<count($autoA[0]); $i++){
+        for($j=0; $j<12; $j++){
 
             echo $autoA[$i][$j];
         }
