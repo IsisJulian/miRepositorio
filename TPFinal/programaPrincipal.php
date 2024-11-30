@@ -26,8 +26,10 @@ do{
 
     
         switch ($opcion) {
-            case "a":
-                autoArr($autArray);
+            case "a";
+                require_once 'cargaAutomatica.php';
+                $autArray=autoArr();
+                mostrarFinal($autArray);
                 break;
             case "b":
                 manualArray($manuArray);

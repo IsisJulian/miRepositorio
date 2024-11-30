@@ -3,7 +3,7 @@
  * este modulo cargara con valores la matriz inicializada en el programa principal
 * @param array $autArray
 */
-function autoArr($autoArray){
+function autoArr(){
     
     // 2014
     $autoArray[0][0] = 30 ;
@@ -150,4 +150,6 @@ function autoArr($autoArray){
     $autoArray[9][9] = 23;
     $autoArray[9][10] = 28;
     $autoArray[9][11] = 31;
+
+    return $autoArray;
 }

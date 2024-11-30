@@ -9,10 +9,12 @@ function mostrarFinal($auxi){
 @param Int $j
 */
 
-for($i=0; $i<count($auxi); $i++){
-    for($j=0; $j<count($auxi[0]); $j++){
-        echo $auxi[$j][$i],"\n";
+for($i=0; $i<count(array($auxi), COUNT_NORMAL); $i++){
+    for($j=0; $j<count(array ($auxi),COUNT_NORMAL); $j++){
+      
+   print_r(array($auxi))."\n";
     }
 }
+
 
 }
