@@ -39,4 +39,3 @@ function mostrarTempMaxMin($autoAu){
  
 
 }
-?>

@@ -1,8 +1,8 @@
 <?php
 /*Almacenar valores en un Arreglo Bidimensional(matriz) tomando una fila por año(2014 a 2023),y una columna por cada mes
  inicializacion de arrays*/
-$autArray=[10][12];
-$manuArr=[10][12];
+$autArray [10][12];
+$manuArray [10][12];
 $primaveraArray [10][3];
 $inviernoArray [5][3];
 $asociativoArray [1][3];
@@ -91,17 +91,26 @@ do{
                 break;
 
             case "j":
-            
-                break;   
-                 
+                asoArray($asociativoArray,$autArray,$primaveraArray,$inviernoArray);
+
+                    foreach ($asociativoArr as $key => $value) {
+                        echo "la clave es: ".$key;
+                            if($key == "completa"){
+                            mostrarFinal($value);
+                            }elseif($key == "primavera"){
+                                mostrarFinal($value);
+
+                            }else{
+                                mostrarFinal($value);
+                            }
+                    }
+                break;    
             default:
                 echo "Eligio una letra que no corresponde \n ";
         }
         echo "Desea elegir otra opcion? (si/no): ";
         $rpta=trim(fgets(STDIN));
 }while($rpta=="si");
+echo "fin programa";
 
 
-
-7
-?>

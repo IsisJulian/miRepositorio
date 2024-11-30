@@ -18,4 +18,3 @@ function  primavArray($primArray,$auto){
 
 
 
-?>

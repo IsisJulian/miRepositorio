@@ -53,4 +53,3 @@ function mostrarTanio($autoA,$anioE) {
 }
 
 
-?>
