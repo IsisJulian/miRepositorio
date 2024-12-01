@@ -5,15 +5,15 @@
 @param Int $j
 @param Int $grad
 */
-function  primavArray($primArray,$auto){
-    $grad=0;
-    for($i=9; $i<count($auto); $i++){
-        for($j=0; $j<count($auto); $j++){
-            $grad=$auto[$j][$i];
-            $primArray=$grad;
-
-        }
+function  primavArray($auto){
+    $nuevoArray = [];  // Crear un array vacío para almacenar las columnas seleccionadas
+    
+    foreach ($auto as $fila) {
+        // Guardar las columnas 9 a 11 (índices 8, 9, 10) en el nuevo array
+        $nuevoArray[] = [$fila[8], $fila[9], $fila[10]];  // Agregar las columnas seleccionadas
     }
+
+    return $nuevoArray;  // Devolver el nuevo array con las columnas seleccionadas
 }
 
 

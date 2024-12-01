@@ -1,13 +1,17 @@
 <?php
 /*Almacenar valores en un Arreglo Bidimensional(matriz) tomando una fila por año(2014 a 2023),y una columna por cada mes
  inicializacion de arrays*/
-
-$autArray[10][12];
-$manuArray [10][12];
-$primaveraArray [10][3];
-$inviernoArray [5][3];
-$asociativoArray [1][3];
-require_once 'cargaAutomatica.php';
+ require_once 'cargaAutomatica.php';
+ 
+ require_once 'arregloAsociativo.php';
+ require_once 'primavera.php';
+ require_once 'invierno.php';
+ require_once 'mostrarFinal.php';
+ $autArray=autoArr();
+ $invierno=invierArray($autArray);
+ $primavera=primavArray($autArray);
+ 
+ 
 //          \n
 do{
         echo "Bienvenido al menu ingrese la opcion que desea de la letra a hasta i:\n ";
@@ -28,13 +32,7 @@ do{
     
         switch ($opcion) {
             case "a";
-                require_once 'cargaAutomatica.php';
-                $autArray=autoArr();
-                mostrarFinal($autArray);
-            case "a":
-                require_once 'cargaAutomatica.php';
-                autoArr($autArray);
-                echo $autArray;
+               
                 break;
 
             case "b":
@@ -52,7 +50,7 @@ do{
 
                 echo  "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023) :";
                 $anioElegido=trim(fgets(STDIN));
-                echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre";
+                echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=diciembre): ";
                 $mesElegido=trim(fgets(STDIN));
             
                 if ($anioElegido<10 && $mesElegido<12) {
@@ -69,7 +67,10 @@ do{
 
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
                 $anioE= trim(fgets(STDIN));
+                
                 mostrarTanio($anioE,$autArray);
+                
+
                 break;
 
             case "f":
@@ -86,29 +87,29 @@ do{
                 break;
 
             case "h":
-
-                primavArray($primaveraArray,$autArray);
+                require_once 'cargaAutomatica.php';
+                require_once 'primavera.php';
+                require_once 'mostrarFinal.php';
+                $primavera=primavArray($autArray);
+              
+                mostrarFinal($primavera);
                 break;
+                case "i":
+                    require_once 'cargaAutomatica.php';
+                    require_once 'mostrarFinal.php';
+                    require_once 'invierno.php';
+                    $invierno=invierArray($autArray);
 
-            case "i":
-
-                invierArray($inviernoArray,$autArray);
+                    mostrarFinal($invierno);
                 break;
 
             case "j":
-                asoArray($asociativoArray,$autArray,$primaveraArray,$inviernoArray);
-
-                    foreach ($asociativoArr as $key => $value) {
-                        echo "la clave es: ".$key;
-                            if($key == "completa"){
-                            mostrarFinal($value);
-                            }elseif($key == "primavera"){
-                                mostrarFinal($value);
-
-                            }else{
-                                mostrarFinal($value);
-                            }
-                    }
+                require_once 'cargaAutomatica.php';
+                require_once 'arregloAsociativo.php';
+                require_once 'primavera.php';
+                require_once 'invierno.php';
+                require_once 'mostrarFinal.php';
+                $asociativoArray=asoArray($autArray,$primavera,$invierno);
                 break;    
             default:
                 echo "Eligio una letra que no corresponde \n ";
