@@ -1,14 +1,19 @@
 <?php
 /*este modulo cargara los valores de la matriz de manera manual y es inicializada en el principal
-@param array $auxArr
-@param int $mesE
+@param int $cont
+@param int $prome
+ @param int $promedio
+@param string $strAnio
+@param Float $promedio+
+@param int $j
 */
 function mostrarTmes($auxArr,$mesE){
-
+$cont=0;
 $promedio=0;
-for($i=0; $i<count($auxArr[0]); $i++){
-    if($auxArr[0][$i] == $mesE) {
-        for($j=0; $j<count($auxArr); $j++){
+
+
+for($j=0; $j<10; $j++){ 
+      if($mesE >= 0 && $mesE <= 11) {
             switch ($j){
               case 0:
                 $strAnio="2014";
@@ -41,12 +46,16 @@ for($i=0; $i<count($auxArr[0]); $i++){
                 $strAnio="2023";
                 break;
             }
-     echo "año"." ".$strAnio.":".$auxArr[$j][$i],"°C","\n";
-      $promedio=$promedio+$auxArr[$j][$i];
-        }    
+     $cont=$cont+1;
+      
+        }   
+        echo "año"." ".$strAnio.":".$auxArr[$j][$mesE],"°C","\n";
+        $promedio= $promedio=$auxArr[$j][$mesE];
+        
     }
-}
+   if($cont>0) {
+$prome=$promedio/$cont;
+echo "el promedio de todos los meses acumulados por año es: ".$prome."\n";
+}  
 }
 
-$promedio=$promedio/(count($auxArr[0]));
-echo "el promedio de todos los meses acumulados por año es: ".$promedio;
