@@ -8,8 +8,8 @@ $grados=0;
     for($i=0; $i<10; $i++){
 
         for($j=0; $j<12; $j++){
-
-            echo " Ingrese grados: ";
+            
+            echo "Esta en el espacio: ".$i.$j. " Ingrese grados: ";
 
              $grados= trim(fgets(STDIN));
              if (is_numeric($grados)){
