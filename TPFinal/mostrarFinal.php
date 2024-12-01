@@ -16,11 +16,11 @@ function mostrarFinal($auxi){
         foreach ($auxi as $key => $value) {
             // Si el valor es un array, llamar a la función otra vez
             if (is_array($value)) {
-                echo "[$key]"."\n";
+                echo "[$key]"."año \n";
                 mostrarFinal($value); 
             } else {
                 // Imprimir la clave y el valor
-                echo "Clave [$key] : $value","\n";
+                echo "mes [$key] : $value","\n";
             }
         }
     }
