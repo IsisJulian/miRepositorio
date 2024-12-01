@@ -1,12 +1,24 @@
 <?php
 /*Almacenar valores en un Arreglo Bidimensional(matriz) tomando una fila por año(2014 a 2023),y una columna por cada mes
  inicializacion de arrays*/
- require_once 'cargaAutomatica.php';
- 
+ /*
+ string $opcion
+ int $autArray
+ int $invierno
+ int $primavera
+ Real $$asociativoArray
+ */
+ require_once 'cargaAutomatica.php'; 
  require_once 'arregloAsociativo.php';
  require_once 'primavera.php';
  require_once 'invierno.php';
  require_once 'mostrarFinal.php';
+ require_once 'cargaManual.php';
+ require_once 'mostrarAnio.php';
+ require_once 'mostrarAuto.php';
+ require_once 'mostrarAnioyMes.php';
+ require_once 'mostrarMes.php';
+ require_once 'tempMax-Min.php';
  $autArray=autoArr();
  $invierno=invierArray($autArray);
  $primavera=primavArray($autArray);
@@ -34,7 +46,7 @@ do{
             case "a";
                 require_once 'cargaAutomatica.php';
                 require_once 'mostrarFinal.php';
-                $autArray=autoArr();
+                
                 mostrarFinal($autArray);
                 break;
             case "b":
