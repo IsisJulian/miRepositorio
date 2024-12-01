@@ -45,7 +45,6 @@ do{
         switch ($opcion) {
             case "a";
                 
-                
                 mostrarFinal($autArray);
                 break;
 
@@ -57,22 +56,26 @@ do{
             case "c":
                
                 mostrarArr($autArray);
-
                 break;
                 
             case "d":
 
                 echo  "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023) :";
+
                 $anioElegido=trim(fgets(STDIN));
+
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=diciembre): ";
+
                 $mesElegido=trim(fgets(STDIN));
             
                 if ($anioElegido<10 && $mesElegido<12) {
 
                     $arrAnioyMes=mostrarArrAyM($autArray,$anioElegido,$mesElegido);
+
                     echo "la temperatura del año y mes elegido es: " .$arrAnioyMes. "C° \n";
 
                 }else{
+
                     echo "Ingreso un dato incorrecto";
                 }
                 break;
@@ -80,54 +83,53 @@ do{
             case "e":
 
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
-                $anioE=(int) trim(fgets(STDIN));
-                
-                
-                
-                mostrarTanio($autArray,$anioE);
-                
 
+                $anioE=(int) trim(fgets(STDIN));
+
+                mostrarTanio($autArray,$anioE);           
                 break;
 
             case "f":
 
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
-                $mesE=(int) trim(fgets(STDIN));
 
-                
-                
+                $mesE=(int) trim(fgets(STDIN)); 
+
                 mostrarTmes($autArray,$mesE);
-            
                 break;
 
             case "g":
-                
-                
+
                 mostrarTempMaxMin($autArray);
                 break;
 
             case "h":
-                ;
+                
                 $primavera=primavArray($autArray);
-              
+
                 mostrarFinal($primavera);
                 break;
-                case "i":
-                    
-                    $invierno=invierArray($autArray);
 
+            case "i":
+                  
+                    $invierno=invierArray($autArray);
                     mostrarFinal($invierno);
-                break;
+
+                    break;
 
             case "j":
-                ;
+                
                 $asociativoArray=asoArray($autArray,$primavera,$invierno);
                 break;    
+
             default:
                 echo "Eligio una letra que no corresponde \n ";
         }
         echo "Desea elegir otra opcion? (si/no): ";
+
         $rpta=trim(fgets(STDIN));
+
 }while($rpta=="si");
- echo "vuelva pronto!!:)";
+
+echo "vuelva pronto!!:)";
 
