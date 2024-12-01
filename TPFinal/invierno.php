@@ -2,9 +2,8 @@
 /*este modulo recupera los datos de invierno del arreglo automaticopara asi crear un arreglo bidimensional de los ultimos 5 años
 (jul-ago-sep)*/
 /*
- @param Int $i
-@param Int $j
-@param Int $g
+ @param REAL $nuevaFila
+ @param REAL $nuevoArra
 */
 function invierArray($aut){
     // Verificamos si el array tiene al menos 10 filas y 12 columnas
@@ -22,7 +21,7 @@ function invierArray($aut){
   // Filtrar columnas 6 a 8
   foreach ($filas as $fila) {
     $nuevaFila = array_slice($fila, 6, 3);  // se desplaza de las columnas 6 a 8 (índices 5, 6, 7)
-    $nuevoArray[] = $nuevaFila;  // Agregar la nueva fila al array
+    $nuevoArra[] = $nuevaFila;  // Agregar la nueva fila al array
   }
-  return $nuevoArray;
+  return $nuevoArra;
 }
