@@ -69,7 +69,7 @@ do{
             case "e":
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
                 $anioE= trim(fgets(STDIN));
-                mostrarTanio($anioE,$autArray);
+                mostrarTanio($autArray,$anioE);
                 break;
             case "f":
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";

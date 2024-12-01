@@ -5,9 +5,8 @@
 @param string $mes
 */
 function mostrarTanio($autoA,$anioE){
-for($i=0; $i<count($autoA); $i++){
-  if($autoA[$i][0] == $anioE) {
-    for($j=0; $j<count($autoA[0]); $j++){
+for($j=0; $j<count($autoA[0]); $j++){
+      if($anioE >= 0 && $anioE <= 9) {
             switch ($j){
               case 0:
                 $mes="ene";
@@ -46,10 +45,9 @@ for($i=0; $i<count($autoA); $i++){
                 $mes="dic";
                 break;
             }
-     echo "Mes ".$mes.": ".$autoA[$i][$j]."°C \n";
+     echo "Mes ".$mes.": ".$autoA[$anioE][$j]."°C \n";
     
     }
   }
-}
 }
 
