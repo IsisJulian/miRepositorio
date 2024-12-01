@@ -1,6 +1,7 @@
 <?php
 /*Almacenar valores en un Arreglo Bidimensional(matriz) tomando una fila por año(2014 a 2023),y una columna por cada mes
  inicializacion de arrays*/
+
 $autArray[10][12];
 $manuArray [10][12];
 $primaveraArray [10][3];
@@ -26,6 +27,10 @@ do{
 
     
         switch ($opcion) {
+            case "a";
+                require_once 'cargaAutomatica.php';
+                $autArray=autoArr();
+                mostrarFinal($autArray);
             case "a":
                 require_once 'cargaAutomatica.php';
                 autoArr($autArray);
