@@ -1,11 +1,10 @@
 <?php
 /*este modulo cargara los valores de la matriz de manera manual y es inicializada en el principal
-@param int $cont
-@param int $prome
- @param int $promedio
-@param string $strAnio
-@param Float $promedio
-@param int $j
+*@param int $cont
+*@param int $prome
+*@param string $strAnio
+*@param Float $promedio
+*@param int $j
 */
 function mostrarTmes($auxArr,$mesE){
 $cont=0;

@@ -44,19 +44,18 @@ do{
     
         switch ($opcion) {
             case "a";
-                require_once 'cargaAutomatica.php';
-                require_once 'mostrarFinal.php';
+                
                 
                 mostrarFinal($autArray);
                 break;
 
             case "b":
-                require_once 'cargaManual.php';
+                
                 manualArray($manuArr);
                 break;
 
             case "c":
-                require_once 'mostrarAuto.php';
+               
                 mostrarArr($autArray);
 
                 break;
@@ -82,9 +81,8 @@ do{
 
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
                 $anioE=(int) trim(fgets(STDIN));
-
-                require_once 'mostrarMes.php';
-                require_once 'cargaAutomatica.php';
+                
+                
                 
                 mostrarTanio($autArray,$anioE);
                 
@@ -94,45 +92,35 @@ do{
             case "f":
 
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
-                $mesE=trim(fgets(STDIN));
+                $mesE=(int) trim(fgets(STDIN));
 
-                require_once 'mostrarMes.php';
-                require_once 'cargaAutomatica.php';
+                
                 
                 mostrarTmes($autArray,$mesE);
             
                 break;
 
             case "g":
-                require_once 'tempMax-Min.php';
-                require_once 'cargaAutomatica.php';
+                
                 
                 mostrarTempMaxMin($autArray);
                 break;
 
             case "h":
-                require_once 'cargaAutomatica.php';
-                require_once 'primavera.php';
-                require_once 'mostrarFinal.php';
+                ;
                 $primavera=primavArray($autArray);
               
                 mostrarFinal($primavera);
                 break;
                 case "i":
-                    require_once 'cargaAutomatica.php';
-                    require_once 'mostrarFinal.php';
-                    require_once 'invierno.php';
+                    
                     $invierno=invierArray($autArray);
 
                     mostrarFinal($invierno);
                 break;
 
             case "j":
-                require_once 'cargaAutomatica.php';
-                require_once 'arregloAsociativo.php';
-                require_once 'primavera.php';
-                require_once 'invierno.php';
-                require_once 'mostrarFinal.php';
+                ;
                 $asociativoArray=asoArray($autArray,$primavera,$invierno);
                 break;    
             default:
