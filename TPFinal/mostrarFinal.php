@@ -16,6 +16,7 @@ function mostrarFinal($auxi){
     */
     
     if (is_array($auxi)) {
+        //is_array verifica si una variable es una matriz
         // Recorrer el array de manera exhaustiva
         foreach ($auxi as $key => $value) {
             // Si el valor es un array, llamar a la función otra vez
