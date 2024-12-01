@@ -9,8 +9,8 @@ function  primavArray($auto){
     $nuevoArray = [];  // Crear un array vacío para almacenar las columnas seleccionadas
     
     foreach ($auto as $fila) {
-        // Guardar las columnas 9 a 11 (índices 8, 9, 10) en el nuevo array
-        $nuevoArray[] = [$fila[8], $fila[9], $fila[10]];  // Agregar las columnas seleccionadas
+        // Guardar las columnas 9 a 11 (índices 9, 10 11) en el nuevo array
+        $nuevoArray[] = [$fila[9], $fila[10], $fila[11]];  // Agregar las columnas seleccionadas
     }
 
     return $nuevoArray;  // Devolver el nuevo array con las columnas seleccionadas
