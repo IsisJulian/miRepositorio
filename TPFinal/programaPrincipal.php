@@ -1,10 +1,8 @@
 <?php
 /*Almacenar valores en un Arreglo Bidimensional(matriz) tomando una fila por año(2014 a 2023),y una columna por cada mes
  inicializacion de arrays*/
-$autArray=autoArr();
 
-$invierno=invierArray(autoArr());
- $primavera=primavArray($autArray);
+
 
 //          \n
 do{
@@ -80,7 +78,7 @@ do{
                 break;
             case "j":
                 require_once 'cargaAutomatica.php';
-                require_once 'cargaAutomatica.php';
+                require_once 'arregloAsociativo';
                 require_once 'primavera.php';
                 require_once 'invierno.php';
                 require_once 'mostrarFinal.php';
