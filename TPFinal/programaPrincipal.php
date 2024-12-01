@@ -81,9 +81,12 @@ do{
             case "e":
 
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
-                $anioE= trim(fgets(STDIN));
+                $anioE=(int) trim(fgets(STDIN));
                 
-                mostrarTanio($anioE,$autArray);
+                require_once 'mostrarMes.php';
+                require_once 'cargaAutomatica.php';
+                
+                mostrarTanio($autArray,$anioE);
                 
 
                 break;
@@ -96,7 +99,7 @@ do{
                 require_once 'mostrarMes.php';
                 require_once 'cargaAutomatica.php';
                 
-                 mostrarTmes($autArray,$mesE);
+                mostrarTmes($autArray,$mesE);
             
                 break;
 
