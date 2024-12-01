@@ -61,8 +61,12 @@ do{
                 break;
             case "f":
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
-                 $mesE=trim(fgets(STDIN));
-                 mostrarTmes($mesE,$autArray);
+                $mesE=trim(fgets(STDIN));
+                
+                require_once 'mostrarMes.php';
+                require_once 'cargaAutomatica.php';
+                $autArray=autoArr();
+                 mostrarTmes($autArray,$mesE);
             
                 break;
             case "g":
