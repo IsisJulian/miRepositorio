@@ -62,18 +62,18 @@ do{
             case "f":
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
                 $mesE=trim(fgets(STDIN));
-                
+
                 require_once 'mostrarMes.php';
                 require_once 'cargaAutomatica.php';
-                $autArray=autoArr();
+                
                  mostrarTmes($autArray,$mesE);
             
                 break;
             case "g":
                 require_once 'tempMax-Min.php';
                 require_once 'cargaAutomatica.php';
-                $auto=autoArr();
-                mostrarTempMaxMin($auto);
+                
+                mostrarTempMaxMin($autArray);
                 break;
             case "h":
                 require_once 'cargaAutomatica.php';

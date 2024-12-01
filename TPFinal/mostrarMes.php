@@ -4,14 +4,15 @@
 @param int $prome
  @param int $promedio
 @param string $strAnio
-@param Float $promedio
+@param Float $promedio+
+@param int $j
 */
 function mostrarTmes($auxArr,$mesE){
 $cont=0;
 $promedio=0;
 
 
-for($j=0; $j<10; $j++){
+for($j=0; $j<10; $j++){ 
       if($mesE >= 0 && $mesE <= 11) {
             switch ($j){
               case 0:

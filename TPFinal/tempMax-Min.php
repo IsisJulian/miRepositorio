@@ -57,6 +57,7 @@ function mostrarTempMaxMin($autoAu){
     echo "La temperatura máxima es: " . $tempMax . "°C, corresponde al año: " . $tempMaxAnio . " y al mes: " . $tempMaxMes . "\n";
     echo "\n";
     echo "La temperatura mínima es: " . $tempMin . "°C, corresponde al año: " . $tempMinAnio . " y al mes: " . $tempMinMes . "\n";
+    echo "\n";
     echo "RECUERDE: 0=2014 hasta 9=2023 y 0=enero hasta 11=diciembre, etc.\n";
 }
 
