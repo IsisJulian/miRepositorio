@@ -24,10 +24,8 @@ function mostrarFinal($auxi){
                 mostrarFinal($value); 
             } else {
                 // Imprimir la clave y el valor
-                echo "Clave [$key] => Valor: $value","\n";
+                echo "Clave [$key] : $value","\n";
             }
         }
-    } else {
-        echo "El parámetro proporcionado no es un array.";
     }
-}
+}   
