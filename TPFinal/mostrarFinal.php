@@ -16,12 +16,12 @@ function mostrarFinal($auxi){
     */
     
     if (is_array($auxi)) {
-        // Recorrer el array de manera recursiva
+        // Recorrer el array de manera exhaustiva
         foreach ($auxi as $key => $value) {
-            // Si el valor es un array, llamar la función recursivamente
+            // Si el valor es un array, llamar a la función otra vez
             if (is_array($value)) {
                 echo "[$key]"."\n";
-                mostrarFinal($value); // Llamada recursiva
+                mostrarFinal($value); 
             } else {
                 // Imprimir la clave y el valor
                 echo "Clave [$key] => Valor: $value","\n";

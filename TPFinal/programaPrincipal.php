@@ -66,7 +66,10 @@ do{
             
                 break;
             case "g":
-                mostrarTempMaxMin($autArray);
+                require_once 'tempMax-Min.php';
+                require_once 'cargaAutomatica.php';
+                $auto=autoArr();
+                mostrarTempMaxMin($auto);
                 break;
             case "h":
                 require_once 'cargaAutomatica.php';
