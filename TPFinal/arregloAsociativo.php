@@ -1,6 +1,6 @@
 <?php
 /*crear un arreglo Asociativo con los datos de la matriz automatica,primavera y invierno */
-//@param REAL $asociativoArr
+//@param array $asociativoArr
 function asoArray($autArr,$primaveraArr,$inviernoArr){
     $asociativoArr=[];
     $asociativoArr = [

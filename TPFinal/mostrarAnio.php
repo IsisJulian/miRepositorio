@@ -1,7 +1,7 @@
 <?php
 /*este modulo cargara los valores de la matriz de manera manual y es inicializada en el programa principal
-@param array $autoAr
-@param int $anioE
+*@param arrays $autoAr
+*@param int $anioE
 */
 function mostrarTanio($autoA,$anioE){
 for($i=0; $i<10; $i++){
