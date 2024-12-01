@@ -1,11 +1,10 @@
 <?php
 /*Almacenar valores en un Arreglo Bidimensional(matriz) tomando una fila por año(2014 a 2023),y una columna por cada mes
  inicializacion de arrays*/
+$autArray=autoArr();
 
-$manuArray [10][12];
-$primaveraArray [10][3];
-$inviernoArray [5][3];
-$asociativoArray [1][3];
+$invierno=invierArray(autoArr());
+ $primavera=primavArray($autArray);
 
 //          \n
 do{
@@ -28,6 +27,7 @@ do{
         switch ($opcion) {
             case "a";
                 require_once 'cargaAutomatica.php';
+                require_once 'mostrarFinal.php';
                 $autArray=autoArr();
                 mostrarFinal($autArray);
                 break;
@@ -63,25 +63,28 @@ do{
                 mostrarTempMaxMin($autArray);
                 break;
             case "h":
-                primavArray($primaveraArray,$autArray);
+                require_once 'cargaAutomatica.php';
+                require_once 'primavera.php';
+                require_once 'mostrarFinal.php';
+                $primavera=primavArray($autArray);
+              
+                mostrarFinal($primavera);
                 break;
                 case "i":
-                invierArray($inviernoArray,$autArray);
+                    require_once 'cargaAutomatica.php';
+                    require_once 'mostrarFinal.php';
+                    require_once 'invierno.php';
+                    $invierno=invierArray($autArray);
+
+                    mostrarFinal($invierno);
                 break;
             case "j":
-                asoArray($asociativoArray,$autArray,$primaveraArray,$inviernoArray);
-
-                    foreach ($asociativoArr as $key => $value) {
-                        echo "la clave es: ".$key;
-                            if($key == "completa"){
-                            mostrarFinal($value);
-                            }elseif($key == "primavera"){
-                                mostrarFinal($value);
-
-                            }else{
-                                mostrarFinal($value);
-                            }
-                    }
+                require_once 'cargaAutomatica.php';
+                require_once 'cargaAutomatica.php';
+                require_once 'primavera.php';
+                require_once 'invierno.php';
+                require_once 'mostrarFinal.php';
+                $asociativoArray=asoArray($autArray,$primavera,$invierno);
                 break;    
             default:
                 echo "Eligio una letra que no corresponde \n ";
