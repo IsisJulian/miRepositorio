@@ -2,11 +2,11 @@
 /*este modulo cargara los valores de la matriz de manera manual y es inicializada en el programa principal
 @param array $autoAr
 @param int $anioE
-@param string $mes
 */
 function mostrarTanio($autoA,$anioE){
-for($j=0; $j<count($autoA[0]); $j++){
-      if($anioE >= 0 && $anioE <= 9) {
+for($i=0; $i<10; $i++){
+  if($autoA[$i][0] == $anioE) {
+    for($j=0; $j<12; $j++){
             switch ($j){
               case 0:
                 $mes="ene";
@@ -45,9 +45,10 @@ for($j=0; $j<count($autoA[0]); $j++){
                 $mes="dic";
                 break;
             }
-     echo "Mes ".$mes.": ".$autoA[$anioE][$j]."°C \n";
+     echo "Mes ".$mes.": ".$autoA[$i][$j]."°C \n";
     
     }
   }
+}
 }
 

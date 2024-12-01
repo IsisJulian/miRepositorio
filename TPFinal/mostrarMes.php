@@ -4,7 +4,7 @@
 @param int $prome
  @param int $promedio
 @param string $strAnio
-@param Float $promedio+
+@param Float $promedio
 @param int $j
 */
 function mostrarTmes($auxArr,$mesE){

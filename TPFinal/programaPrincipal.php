@@ -22,7 +22,7 @@
  $autArray=autoArr();
  $invierno=invierArray($autArray);
  $primavera=primavArray($autArray);
- 
+ $manuArr=[];
  
 //          \n
 do{
@@ -49,29 +49,47 @@ do{
                 
                 mostrarFinal($autArray);
                 break;
+
             case "b":
-                manualArray($manuArray);
+                require_once 'cargaManual.php';
+                manualArray($manuArr);
                 break;
+
             case "c":
+                require_once 'mostrarAuto.php';
                 mostrarArr($autArray);
+
                 break;
+                
             case "d":
+
                 echo  "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023) :";
                 $anioElegido=trim(fgets(STDIN));
-                echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre";
+                echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=diciembre): ";
                 $mesElegido=trim(fgets(STDIN));
+            
                 if ($anioElegido<10 && $mesElegido<12) {
-                mostrarArrAyM($autArray,$anioElegido,$mesElegido);
+
+                    $arrAnioyMes=mostrarArrAyM($autArray,$anioElegido,$mesElegido);
+                    echo "la temperatura del año y mes elegido es: " .$arrAnioyMes. "C°";
+
                 }else{
-                echo "Ingreso un dato incorrecto";
+                    echo "Ingreso un dato incorrecto";
                 }
                 break;
+
             case "e":
+
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
                 $anioE= trim(fgets(STDIN));
+                
                 mostrarTanio($anioE,$autArray);
+                
+
                 break;
+
             case "f":
+
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
                 $mesE=trim(fgets(STDIN));
 
@@ -81,12 +99,14 @@ do{
                  mostrarTmes($autArray,$mesE);
             
                 break;
+
             case "g":
                 require_once 'tempMax-Min.php';
                 require_once 'cargaAutomatica.php';
                 
                 mostrarTempMaxMin($autArray);
                 break;
+
             case "h":
                 require_once 'cargaAutomatica.php';
                 require_once 'primavera.php';
@@ -103,6 +123,7 @@ do{
 
                     mostrarFinal($invierno);
                 break;
+
             case "j":
                 require_once 'cargaAutomatica.php';
                 require_once 'arregloAsociativo.php';
