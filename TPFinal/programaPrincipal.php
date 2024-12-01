@@ -71,7 +71,7 @@ do{
                 if ($anioElegido<10 && $mesElegido<12) {
 
                     $arrAnioyMes=mostrarArrAyM($autArray,$anioElegido,$mesElegido);
-                    echo "la temperatura del año y mes elegido es: " .$arrAnioyMes. "C°";
+                    echo "la temperatura del año y mes elegido es: " .$arrAnioyMes. "C° \n";
 
                 }else{
                     echo "Ingreso un dato incorrecto";
@@ -82,7 +82,7 @@ do{
 
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
                 $anioE=(int) trim(fgets(STDIN));
-                
+
                 require_once 'mostrarMes.php';
                 require_once 'cargaAutomatica.php';
                 
