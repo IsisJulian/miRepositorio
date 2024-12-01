@@ -1,12 +1,16 @@
 <?php
 /*este modulo cargara los valores de la matriz de manera manual y es inicializada en el programa principal
+<<<<<<< HEAD
 *@param arrays $autoAr
 *@param int $anioE
+=======
+@param array $autoA
+@param int $anioE
+>>>>>>> e0bb50f3f47db646ae1ba675004d22b3fd2de7fc
 */
 function mostrarTanio($autoA,$anioE){
-for($i=0; $i<10; $i++){
-  if($autoA[$i][0] == $anioE) {
-    for($j=0; $j<12; $j++){
+  for($j=0; $j<12; $j++){ 
+    if($anioE >= 0 && $anioE <= 9) {
             switch ($j){
               case 0:
                 $mes="ene";
@@ -45,10 +49,10 @@ for($i=0; $i<10; $i++){
                 $mes="dic";
                 break;
             }
-     echo "Mes ".$mes.": ".$autoA[$i][$j]."°C \n";
+
+     echo "Mes ".$mes.": ".$autoA[$anioE][$j]."°C \n";
     
     }
   }
-}
 }
 
