@@ -9,7 +9,7 @@ function mostrarArr($autoA){
 
         for($j=0; $j<12; $j++){
 
-            echo $autoA[$i][$j];
+            echo $autoA[$i][$j]. " C° \n";
         }
         
         

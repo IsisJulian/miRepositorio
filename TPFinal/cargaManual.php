@@ -9,16 +9,20 @@ $grados=0;
 
         for($j=0; $j<12; $j++){
 
-            echo "Ingrese grados: ";
+            echo " Ingrese grados: ";
 
              $grados= trim(fgets(STDIN));
-
-            $manualArr[$i][$j]=$grados;
+             if (is_numeric($grados)){
+                $manualArr[$i][$j]=$grados;
+            }else{
+                echo "debe ser un numero entero!! \n ";
+            }
+        
         }
         
         
     }
     
-    
+    print_r($manualArr); 
 
 }

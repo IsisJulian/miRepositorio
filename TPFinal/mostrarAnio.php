@@ -3,10 +3,10 @@
 @param array $autoAr
 @param int $anioE
 */
-function mostrarTanio($autoA,$anioE) {
-  for($i=0; $i<count($autoA); $i++){
+function mostrarTanio($anioE,$autoA) {
+  for($i=0; $i<10; $i++){
     if($autoA[$i][0] == $anioE) {
-      for($j=0; $j<count($autoA[0]); $j++){
+      for($j=0; $j<12; $j++){
               switch ($j){
                   case 0:
                     $mes="ene";
@@ -46,7 +46,7 @@ function mostrarTanio($autoA,$anioE) {
                     break;
               }
        echo "Mes ".$mes.": ". $autoA[$i][$j]."°C \n";
-      
+       print_r($autoA[$i][$j]); 
       }
     }
   }
