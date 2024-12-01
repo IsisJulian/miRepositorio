@@ -78,7 +78,7 @@ do{
                 break;
             case "j":
                 require_once 'cargaAutomatica.php';
-                require_once 'arregloAsociativo';
+                require_once 'arregloAsociativo.php';
                 require_once 'primavera.php';
                 require_once 'invierno.php';
                 require_once 'mostrarFinal.php';
