@@ -49,7 +49,7 @@ for($j=0; $j<10; $j++){
       
         }   
         echo "año"." ".$strAnio.":".$auxArr[$j][$mesE],"°C","\n";
-        $promedio= $promedio=$auxArr[$j][$mesE];
+        $promedio= $promedio+$auxArr[$j][$mesE];
         
     }
    if($cont>0) {
