@@ -4,10 +4,7 @@
 */
 function mostrarFinal($auxi){
 //este modulo va a recorrer y mostrar las matrices automatica,manual,primavera,invierno y asociativa
-/*
-@param Int $i
-@param Int $j
-*/
+
 
     
     if (is_array($auxi)) {
