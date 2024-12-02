@@ -21,7 +21,7 @@ function invierArray($aut){
   
   // Filtrar columnas 6 a 8
   foreach ($filas as $fila) {
-    $nuevaFila = array_slice($fila, 6, 3);  // se desplaza de las columnas 6 a 8 (índices 5, 6, 7)
+    $nuevaFila = array_slice($fila, 6, 3);  // se desplaza de las columnas 6 a 8 (índices 6, 7,8)
     $nuevoArray[] = $nuevaFila;  // Agregar la nueva fila al array
   }
   return $nuevoArray;

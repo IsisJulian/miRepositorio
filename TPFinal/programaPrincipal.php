@@ -4,9 +4,9 @@
  /*
  string $opcion
  int $autArray
- int $invierno
- int $primavera
- Real $asociativoArray
+ array $invierno
+ array $primavera
+ array $asociativoArray
  */
  require_once 'cargaAutomatica.php'; 
  require_once 'arregloAsociativo.php';
@@ -49,24 +49,19 @@ do{
                 break;
 
             case "b":
-                
                 manualArray($manuArr);
                 break;
 
             case "c":
-               
                 mostrarArr($autArray);
                 break;
                 
             case "d":
 
                 echo  "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023) :";
-
-                $anioElegido=(int)trim(fgets(STDIN));
-
+                $anioElegido=trim(fgets(STDIN));
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=diciembre): ";
-
-                $mesElegido=(int)trim(fgets(STDIN));
+                $mesElegido=trim(fgets(STDIN));
             
                 if ($anioElegido<10 && $mesElegido<12) {
 
@@ -83,7 +78,6 @@ do{
             case "e":
 
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
-
                 $anioE=(int) trim(fgets(STDIN));
 
                 if ($anioE<10){
@@ -100,7 +94,6 @@ do{
             case "f":
 
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
-
                 $mesE=(int) trim(fgets(STDIN)); 
 
                 mostrarTmes($autArray,$mesE);
@@ -117,12 +110,10 @@ do{
 
                 mostrarFinal($primavera);
                 break;
-
             case "i":
                   
                     $invierno=invierArray($autArray);
                     mostrarFinal($invierno);
-
                     break;
 
             case "j":
@@ -136,8 +127,6 @@ do{
         echo "Desea elegir otra opcion del menu? (si/no): ";
 
         $rpta=trim(fgets(STDIN));
-
 }while($rpta=="si");
-
 echo "vuelva pronto!!:)";
 
