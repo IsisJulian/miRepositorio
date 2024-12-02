@@ -20,7 +20,7 @@ function asoArray($autArr,$primaveraArr,$inviernoArr){
           }else
           echo "no se encontro un arreglo existente";
   }
-return $value;  
+return  $asociativoArr;  
 
     }
 

@@ -7,7 +7,7 @@ function mostrarFinal($auxi){
 
 
     
-    if (is_array($auxi)) {
+   if (is_array($auxi)) {
         //is_array verifica si una variable es una matriz
         
         foreach ($auxi as $key => $value) {
@@ -15,6 +15,7 @@ function mostrarFinal($auxi){
             if (is_array($value)) {
                 echo "[$key]"."año \n";
                 mostrarFinal($value); 
+                
             } else {
                 // Imprimir la clave y el valor
                 echo "mes [$key] : $value","\n";
