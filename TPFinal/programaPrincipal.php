@@ -4,9 +4,9 @@
  /*
  string $opcion
  int $autArray
- int $invierno
- int $primavera
- Real $$asociativoArray
+ array $invierno
+ array $primavera
+ array $asociativoArray
  */
  require_once 'cargaAutomatica.php'; 
  require_once 'arregloAsociativo.php';
@@ -49,23 +49,18 @@ do{
                 break;
 
             case "b":
-                
                 manualArray($manuArr);
                 break;
 
             case "c":
-               
                 mostrarArr($autArray);
                 break;
                 
             case "d":
 
                 echo  "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023) :";
-
                 $anioElegido=trim(fgets(STDIN));
-
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=diciembre): ";
-
                 $mesElegido=trim(fgets(STDIN));
             
                 if ($anioElegido<10 && $mesElegido<12) {
@@ -75,7 +70,6 @@ do{
                     echo "la temperatura del año y mes elegido es: " .$arrAnioyMes. "C° \n";
 
                 }else{
-
                     echo "Ingreso un dato incorrecto";
                 }
                 break;
@@ -83,7 +77,6 @@ do{
             case "e":
 
                 echo "ingrese año (sabiendo que 0=2014 y asi hasta el 9=2023):\n ";
-
                 $anioE=(int) trim(fgets(STDIN));
 
                 mostrarTanio($autArray,$anioE);           
@@ -92,7 +85,6 @@ do{
             case "f":
 
                 echo "ingrese mes  (sabiendo que 0= “enero”y asi hasta el 11=”diciembre”)"."\n";
-
                 $mesE=(int) trim(fgets(STDIN)); 
 
                 mostrarTmes($autArray,$mesE);
@@ -109,12 +101,10 @@ do{
 
                 mostrarFinal($primavera);
                 break;
-
             case "i":
                   
                     $invierno=invierArray($autArray);
                     mostrarFinal($invierno);
-
                     break;
 
             case "j":
@@ -126,10 +116,7 @@ do{
                 echo "Eligio una letra que no corresponde \n ";
         }
         echo "Desea elegir otra opcion? (si/no): ";
-
         $rpta=trim(fgets(STDIN));
-
 }while($rpta=="si");
-
 echo "vuelva pronto!!:)";
 
